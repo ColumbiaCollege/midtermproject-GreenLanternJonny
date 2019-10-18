@@ -9,18 +9,18 @@ class dalek {
   //float xpos, ypos;
   int edge = 512;
   int ydirection;
-  float speed = random(.9,10);
+  float speed = random(.9,5);
   dalek() {
 
     dalek = loadImage("Dalek.png");
 
-    dalekX = dalekX+speed;
+    dalekX = dalekX + speed;
     dalekY = random(.5*height, .5*height);
     wide =.078125*width;
     high =.078125*height;
   }
   void reset() {
-    dalekX = -5;
+    dalekX = speed;
     dalekY = random(25, 480);
     wide =.078125*width;
     high =.078125*width;
@@ -31,7 +31,7 @@ class dalek {
     tint(red, green, blue);
     dalekX = dalekX + speed;
     if (dalekX > width) {
-      dalekX= -5;
+      dalekX= speed;
       dalekY = random(25, 480);
     }
     tint(red, green, blue);

@@ -43,7 +43,8 @@ class Tardis {
       score++;
       //every 10 a dalek will spawn out.
       if (score%9 == 1) {
-        addBot =true; 
+        addBot =true;
+        
       }
     }
   }
